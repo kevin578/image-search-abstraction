@@ -79,7 +79,7 @@ app.get('/imagesearch/:id', (req, res) => {
 });
 
 app.get('/searches', (req,res) => {
-  Search.find().then((search) => {
+  Search.find().limit(10).then((search) => {
     res.send(search);
   })
 
